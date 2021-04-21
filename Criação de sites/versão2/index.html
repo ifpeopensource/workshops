@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alvinator!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1 id="titulo">Alvinator!</h1>
+      <p class="paragrafo">
+        O
+        <a
+          href="https://projetos.ifpeopensource.com.br/alvinator"
+          target="_blank" ref="noopener noreferrer"
+        >
+          alvinator
+        </a>
+        é uma plataforma onde estudantes podem resolver questões
+        de trigonometria.
+      </p>
+    </div>
+    <img
+      src="https://raw.githubusercontent.com/ifpe-open-source/alvinator/master/docs/media/projectImage.jpg"
+      alt="Alvinator"
+    >
+  </header>
+  <main>
+    <h2>Como funciona?</h2>
+    <p class="paragrafo">A aplicação <strong>calcula os lados, alturas, projeções, área e
+      perímetro do triângulo</strong> baseado em apenas dois valores dados pelo
+      usuário (tudo <span class="italico">client-side</span>).
+    </p>
+    <a
+      id="link-projeto"
+      class="botao"
+      href="https://projetos.ifpeopensource.com.br/alvinator"
+      target="_blank"
+      ref="noopener noreferrer"
+    >
+      Acessar Alvinator!
+    </a>
+    <button class="botao" id="proximo-projeto" onClick="proximoProjeto()">Próximo Projeto</button>
+  </main>
+  <footer>
+    <div class="projeto">
+      <!-- Nesse caso, não usamos o strong, já que não é uma ênfase -->
+      <p>Um projeto</p>
+      <img src="https://www.ifpeopensource.com.br/assets/images/logo-vertical-dark.svg" alt="IFPE Open Source">
+    </div>
+    <p class="feito-com">
+      Feito com <br/> 
+      <!-- break-row (quebrar linha) -->
+      ❤️ e 💻
+    </p>
+  </footer>
+
+  <script>
+    function proximoProjeto() {
+      document.querySelector("#titulo").innerText = "StockID"
+    }
+  </script>
+</body>
+</html>

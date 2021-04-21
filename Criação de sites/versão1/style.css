@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f0f0f0;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p, h1, h2, a, button {
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+header, main, footer {
+  padding: 32px;
+  max-width: 1000px;
+  display: flex;
+}
+
+/* Cabeçalho da página */
+header {
+  background: #10AF45;
+  
+  flex-direction: row;
+}
+
+header h1 {
+  color: white;
+  font-size: 64px;
+  font-family: Ubuntu, Arial, sans-serif;
+}
+
+header p {
+  color: white;
+  margin-top: 16px;
+}
+
+header p a {
+  color: lightgray;
+  text-decoration: underline;
+}
+
+header img {
+  max-width: 500px;
+  border: 2px solid white;
+}
+
+/* Parte principal da página */
+main {
+  flex-direction: column;
+  background: whitesmoke;
+}
+
+main h2 {
+  margin-bottom: 16px;
+}
+
+span.italico {
+  font-style: italic;
+}
+
+a.botao {
+  flex: 1;
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  
+  text-decoration: none;  
+  font-size: 24px;
+}
+
+a#link-projeto {
+  margin: 32px 0;
+
+  padding: 16px;
+  border-radius: 8px;
+  
+  font-size: 24px;
+  color: white;
+  background: #10AF45;
+}
+
+a#proximo-projeto {
+  color: black;
+  background: #aaa;
+}
+
+/* Rodapé da página */
+footer {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div.projeto p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+footer div.projeto img {
+  width: 100px;
+}
+
+footer p.feito-com {
+  font-size: 24px;
+  text-align:right;
+}
