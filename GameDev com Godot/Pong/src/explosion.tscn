@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0.0934579, 0.373832, 0.579439, 0.841121 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0.861094, 0, 1, 0.949769, 0.792207, 0, 1, 0.372109, 0, 0, 1 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends CPUParticles2D
+
+
+
+func _on_Timer_timeout():
+	queue_free()
+"
+
+[node name="explosion" type="CPUParticles2D"]
+emitting = false
+amount = 30
+lifetime = 0.77
+one_shot = true
+explosiveness = 0.71
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 148.23
+scale_amount = 14.11
+color_ramp = SubResource( 1 )
+script = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
