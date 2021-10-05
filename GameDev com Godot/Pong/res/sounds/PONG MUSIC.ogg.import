@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/PONG MUSIC.ogg-ec55d44dae07dbceafe75e117913b782.oggstr"
+
+[deps]
+
+source_file="res://res/sounds/PONG MUSIC.ogg"
+dest_files=[ "res://.import/PONG MUSIC.ogg-ec55d44dae07dbceafe75e117913b782.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
