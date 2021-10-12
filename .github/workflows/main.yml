@@ -1,0 +1,31 @@
+name: READMEUPDATER
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches: [ main ]
+
+jobs:
+
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      # Runs a single command using the runners shell
+      - if: github.event.pull_request.merged == true
+      - name: Edit the README.md
+        run: |
+          echo "\n### [$repo](https://github.com/ifpeopensource/workshops/tree/main/$repo), com [@$contributor](https://github.com/$contributor)" >> README.md
+          git add README.md
+          git commit -m "Auto update to README.md"
+          git fetch origin master
+          git push origin HEAD:master
+        env:
+          repo: ${{ github.event.pull_request.base.ref.repo}}
+          contributor: ${{ github.event.pull_request.base.ref.owner}}
+
