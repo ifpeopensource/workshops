@@ -17,8 +17,8 @@ jobs:
         with:
           fetch-depth: 0
       # Runs a single command using the runners shell
-      - if: github.event.pull_request.merged == true
       - name: Edit the README.md
+        if: github.event.pull_request.merged == true
         run: |
           echo "\n### [$repo](https://github.com/ifpeopensource/workshops/tree/main/$repo), com [@$contributor](https://github.com/$contributor)" >> README.md
           git add README.md
