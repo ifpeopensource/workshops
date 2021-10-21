@@ -18,14 +18,16 @@ jobs:
           fetch-depth: 0
       # Runs a single command using the runners shell
       - name: Edit the README.md
-        if: github.event.pull_request.merged == true
+        if: |
+            github.event.pull_request.merged == true
+            && contains(github.event.pull_request.labels.*.name, 'workshop')
         run: |
-          echo "\n### [$repo](https://github.com/ifpeopensource/workshops/tree/main/$repo), com [@$contributor](https://github.com/$contributor)" >> README.md
-          git add README.md
-          git commit -m "Auto update to README.md"
-          git fetch origin master
-          git push origin HEAD:master
+              python ./scripts/updater.py
+              git add README.md
+              git commit -m "Auto update to README.md"
+              git fetch origin master
+              git push origin HEAD:master
         env:
-          repo: ${{ github.event.pull_request.base.ref.repo}}
-          contributor: ${{ github.event.pull_request.base.ref.owner}}
+          repo: ${{github.event.pull_request.base.repo.name}}
+          assignees: ${{github.event.pull_request.assignees}}
 
