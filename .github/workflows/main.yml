@@ -22,7 +22,7 @@ jobs:
             github.event.pull_request.merged == true
             && contains(github.event.pull_request.labels.*.name, 'workshop')
         run: |
-              python ./scripts/updater.py
+              python scripts/updater.py
               git add README.md
               git commit -m "Auto update to README.md"
               git fetch origin master
