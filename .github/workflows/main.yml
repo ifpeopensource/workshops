@@ -18,9 +18,7 @@ jobs:
           fetch-depth: 0
       # Runs a single command using the runners shell
       - name: Edit the README.md
-        if: |
-            github.event.pull_request.merged == true
-            && contains(github.event.pull_request.labels.*.name, 'workshop')
+        if: github.event.pull_request.merged == true
         run: |
               python scripts/updater.py
               git add README.md
