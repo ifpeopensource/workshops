@@ -28,6 +28,6 @@ jobs:
               git fetch origin master
               git push origin HEAD:master
         env:
-          repo: ${{github.event.pull_request.base.repo.name}}
-          assignees: ${{github.event.pull_request.assignees}}
+          repo: ${{github.event.pull_request.title}}
+          assignees: ${{toJson(github.event.pull_request.assignees)}}
 
