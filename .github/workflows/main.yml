@@ -27,7 +27,7 @@ jobs:
           git config user.email "<>"
           git add .
           git commit -m "Auto-updating README"
-          git push origin master  
+          git push 
 
         env:
           repo: ${{github.event.pull_request.title}}
