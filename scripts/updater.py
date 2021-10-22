@@ -3,7 +3,7 @@ import os, json
 def main():
     repo = os.getenv("repo")
     assignees = json.loads(os.getenv("assignees"))
-    _readme = open("../README.md", "a")
+    _readme = open("README.md", "a")
 
     contributorsList = []
     for assignee in assignees:
