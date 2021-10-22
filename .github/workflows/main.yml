@@ -23,6 +23,8 @@ jobs:
             && contains(github.event.pull_request.labels.*.name, 'workshop')
         run: |
           python scripts/updater.py
+          cat README.md
+          ls
           git config user.name "README Update Bot"
           git config user.email "<>"
           git add .
