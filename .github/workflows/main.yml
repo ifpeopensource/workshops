@@ -1,0 +1,34 @@
+name: READMEUPDATER
+
+on:
+  pull_request:
+    types: [ closed ]
+    branches: [ main ]
+
+jobs:
+
+  update:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      # Runs a single command using the runners shell
+      - name: Edit the README.md
+        if: |
+            github.event.pull_request.merged == true
+            && contains(github.event.pull_request.labels.*.name, 'workshop')
+        run: |
+          python scripts/updater.py
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Auto-updating README"
+          git push 
+
+        env:
+          repo: ${{github.event.pull_request.title}}
+          assignees: ${{toJson(github.event.pull_request.assignees)}}
