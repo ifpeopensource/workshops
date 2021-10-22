@@ -1,7 +1,7 @@
 import os, json
 
 def main():
-    repo = os.getenv("repo")
+    repo = os.getenv("repo").replace(" ", "%20")
     assignees = json.loads(os.getenv("assignees"))
     _readme = open("README.md", "a")
 
