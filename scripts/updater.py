@@ -15,7 +15,7 @@ def main():
     contributorsString = ", ".join(contributorsList)
 
     string = f"\n### [{repo}](https://github.com/ifpeopensource/workshops/tree/main/{repo}), com {contributorsString}"
-
+    print(string)
     _readme.write(string)
     _readme.close()
 
