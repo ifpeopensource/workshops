@@ -9,13 +9,12 @@ def main():
     for assignee in assignees:
         login = assignee.get("login")
         url = assignee.get("html_url")
-        s = f"[{login}]({url})"
+        s = f"[@{login}]({url})"
         contributorsList.append(s)
     
     contributorsString = ", ".join(contributorsList)
 
     string = f"\n### [{repo}](https://github.com/ifpeopensource/workshops/tree/main/{repo}), com {contributorsString}"
-    print(string)
     _readme.write(string)
     _readme.close()
 
