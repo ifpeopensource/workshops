@@ -8,3 +8,5 @@ Repositório com arquivos e slides dos workshops/talks/palestras realizadas pelo
 ### [Arduino](https://github.com/ifpeopensource/workshops/tree/main/Arduino), com [@ryangpaiva](https://github.com/ryangpaiva)
 
 ### [Minha Primeira Contribuição Open Source](https://github.com/ifpeopensource/workshops/tree/main/Minha%20Primeira%20Contribui%C3%A7%C3%A3o%20Open%20Source), com [@OtacilioN](https://github.com/OtacilioN)
+
+### [Last Test](https://github.com/ifpeopensource/workshops/tree/main/Last Test), com [@Gvinfinity](https://github.com/Gvinfinity)
