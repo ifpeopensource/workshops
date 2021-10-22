@@ -21,13 +21,18 @@ jobs:
         if: |
             github.event.pull_request.merged == true
             && contains(github.event.pull_request.labels.*.name, 'workshop')
-        run: |
-              python scripts/updater.py
-              git add README.md
-              git commit -m "Auto update to README.md"
-              git fetch origin master
-              git push origin HEAD:master
+        run: python scripts/updater.py
         env:
           repo: ${{github.event.pull_request.title}}
           assignees: ${{toJson(github.event.pull_request.assignees)}}
 
+      - name: Setup git config
+        run: |
+          git config user.name "README Update Bot"
+          git config user.email <>
+
+      - name:
+        run: |
+          git add README.md
+          git commit -m "Auto-updating README"
+          git push origin master
