@@ -1,7 +1,8 @@
 import os, json
 
 def main():
-    repo = os.getenv("repo").replace(" ", "%20")
+    repo = os.getenv("repo")
+    reporl = repo.replace(" ", "%20")
     assignees = json.loads(os.getenv("assignees"))
     _readme = open("README.md", "a")
 
@@ -14,7 +15,7 @@ def main():
     
     contributorsString = ", ".join(contributorsList)
 
-    string = f"\n### [{repo}](https://github.com/ifpeopensource/workshops/tree/main/{repo}), com {contributorsString}"
+    string = f"\n### [{repo}](https://github.com/ifpeopensource/workshops/tree/main/{reporl}), com {contributorsString}"
     _readme.write(string)
     _readme.close()
 
