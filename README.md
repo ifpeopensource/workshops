@@ -1,6 +1,8 @@
 # Workshops
 Repositório com arquivos e slides dos workshops/talks/palestras realizadas pelo IFPE Open Source.
 
+### [Criando sites e games na web](https://github.com/ifpeopensource/workshops/tree/main/Criando%20sites%20e%20games%20na%20web), com [@weltonfelix](https://github.com/weltonfelix) e [@fabiopapais](https://github.com/fabiopapais)
+
 ### [Criação de Sites](https://github.com/ifpeopensource/workshops/tree/main/Cria%C3%A7%C3%A3o%20de%20sites), com [@weltonfelix](https://github.com/weltonfelix) e [@fabiopapais](https://github.com/fabiopapais)
 
 ### [Git e Github](https://github.com/ifpeopensource/workshops/tree/main/Git%20e%20GitHub), com [@fabiopapais](https://github.com/fabiopapais), [@weltonfelix](https://github.com/weltonfelix) e [ryangpaiva](https://github.com/ryangpaiva)
